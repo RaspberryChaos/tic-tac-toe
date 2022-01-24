@@ -44,14 +44,16 @@ const squareList = document.querySelectorAll(".square");
 
 squareList.forEach((square) => {
   square.addEventListener("click", () => {
-    if (square.textContent === "x" || square.textContent === "o") return;
-    square.textContent = currentPlayer.symbol;
-    squares[square.id] = currentPlayer.symbol;
-    if (checkWin()) {
-      currentPlayer.score += 1;
-      reset();
+    if (win === false) {
+      if (square.textContent === "x" || square.textContent === "o") return;
+      square.textContent = currentPlayer.symbol;
+      squares[square.id] = currentPlayer.symbol;
+      if (checkWin()) {
+        currentPlayer.score += 1;
+        reset();
+      }
+      changePlayer();
     }
-    changePlayer();
   });
 });
 
@@ -106,6 +108,7 @@ function checkWinner() {
     (winner === "draw" ? `The game is a draw.` : `${winner} is the winner!`) +
       ` ${player1.score}/${player2.score}`
   );
+  win = true;
 }
 
 window.addEventListener("load", reset());
