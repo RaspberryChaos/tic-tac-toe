@@ -54,3 +54,7 @@
 .arrow {
   padding-right: 20px;
 }
+
+.arrow-hidden {
+    color: transparent;
+}
