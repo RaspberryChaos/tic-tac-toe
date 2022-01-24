@@ -7,7 +7,7 @@
 #title {
   text-align: center;
   margin: 50px;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 #game-container {
@@ -43,13 +43,13 @@
 }
 
 #timer {
-  font-size: 50px;
+  font-size: 60px;
   margin-bottom: 50px;
   color: rgb(136, 9, 9);
 }
 
 .player {
-  font-size: 32px;
+  font-size: 50px;
 }
 
 .score {
