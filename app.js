@@ -102,9 +102,9 @@ function checkWinner() {
     player1.score === player2.score
       ? "draw"
       : player1.score > player2.score
-      ? "player 1"
-      : "player 2";
-  prompt(
+      ? "Player 1"
+      : "Player 2";
+  alert(
     (winner === "draw" ? `The game is a draw.` : `${winner} is the winner!`) +
       ` ${player1.score}/${player2.score}`
   );
